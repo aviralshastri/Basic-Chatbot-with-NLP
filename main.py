@@ -1,8 +1,11 @@
 import flet as ft
+import tkinter as tk
+from tkinter import PhotoImage, Label, font
+
 import questionprocessor as qp
-
-
 initial=qp.questionResolver("initial")
+
+
 def main(page: ft.Page):
     def intializer():
         ContainerBot=ft.Row(spacing=2)
@@ -36,6 +39,7 @@ def main(page: ft.Page):
         but.disabled=False
         chat.scroll_to(offset=-1, duration=1000)
         page.update()
+    
     page.window_width=600
     page.window_height=700
     page.window_resizable=False
