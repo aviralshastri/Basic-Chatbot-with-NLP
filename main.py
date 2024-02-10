@@ -32,8 +32,10 @@ def main(page: ft.Page):
         ContainerBot.controls.append(TextBot)
         chat.controls.append(ContainerBot)
         chat.scroll_to(offset=-1, duration=1000)
+        meval=tb.value
+        tb.value=""
         page.update()
-        answer=qp.questionResolver(tb.value)
+        answer=qp.questionResolver(meval)
         TextBot.value=answer
         TextBot.text_size=16
         but.disabled=False
